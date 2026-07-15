@@ -1,9 +1,9 @@
 {
     "name": "Aria",
     "dialect": "blade",
-    "description": "A refined personal portfolio and blog — Inter, hairline rules, a day/night toggle, a project grid, and five ready-to-edit posts.",
-    "icon": "🪶",
-    "repo": "https://github.com/thedevdojo/site-templates/tree/main/aria",
+    "description": "A refined personal portfolio and blog \u2014 Inter, hairline rules, a day/night toggle, a project grid, and five ready-to-edit posts.",
+    "icon": "\ud83e\udeb6",
+    "repo": "https://github.com/site-templates/aria",
     "order": 9,
     "category": "portfolio",
     "theme": "light",
