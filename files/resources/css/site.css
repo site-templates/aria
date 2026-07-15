@@ -1,0 +1,239 @@
+/*
+    Aria — design tokens, article styles, and the decorative page grid.
+
+    This file is inlined after Tailwind, so it can use @theme, @utility and @variant.
+    Web fonts are loaded with a <link> tag in the layout head instead of from here.
+*/
+
+/* Dark mode is class-based: main.js toggles the .dark class on <html>. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-sans: "InterVariable", ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --font-sans--font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+::selection {
+    background: var(--color-neutral-900);
+    color: var(--color-neutral-50);
+}
+
+.dark ::selection {
+    background: var(--color-neutral-100);
+    color: var(--color-neutral-900);
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--color-neutral-900);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+.dark a:focus-visible,
+.dark button:focus-visible {
+    outline-color: var(--color-white);
+}
+
+/*
+    The faint grid behind the hero. One masked background beats a wall of divs:
+    it fades out on its own and costs nothing to render.
+*/
+@utility page-grid {
+    background-image:
+        linear-gradient(to right, rgb(10 10 10 / 0.055) 1px, transparent 1px),
+        linear-gradient(to bottom, rgb(10 10 10 / 0.055) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(110% 90% at 50% 0%, #000 0%, transparent 72%);
+
+    @variant dark {
+        background-image:
+            linear-gradient(to right, rgb(255 255 255 / 0.07) 1px, transparent 1px),
+            linear-gradient(to bottom, rgb(255 255 255 / 0.07) 1px, transparent 1px);
+    }
+}
+
+/*
+    Article body styles. The markup inside a post is plain HTML, so it is styled
+    here by element rather than with utility classes on every tag.
+    Width is not set here — add a max-w-[*ch] class next to `prose` in the markup.
+*/
+@utility prose {
+    color: var(--color-neutral-600);
+    font-size: var(--text-base);
+    line-height: --spacing(7);
+    text-wrap: pretty;
+
+    & > * + * {
+        margin-top: --spacing(6);
+    }
+
+    & h2 {
+        margin-top: --spacing(12);
+        color: var(--color-neutral-950);
+        font-size: var(--text-xl);
+        font-weight: var(--font-weight-semibold);
+        letter-spacing: var(--tracking-tight);
+        text-wrap: balance;
+    }
+
+    & h3 {
+        margin-top: --spacing(10);
+        color: var(--color-neutral-950);
+        font-size: var(--text-lg);
+        font-weight: var(--font-weight-semibold);
+        letter-spacing: var(--tracking-tight);
+        text-wrap: balance;
+    }
+
+    & h4,
+    & h5,
+    & h6 {
+        margin-top: --spacing(8);
+        color: var(--color-neutral-950);
+        font-size: var(--text-base);
+        font-weight: var(--font-weight-semibold);
+    }
+
+    & strong {
+        color: var(--color-neutral-950);
+        font-weight: var(--font-weight-semibold);
+    }
+
+    & a {
+        color: var(--color-neutral-950);
+        font-weight: var(--font-weight-medium);
+        text-decoration: underline;
+        text-decoration-color: var(--color-neutral-300);
+        text-underline-offset: 3px;
+
+        @variant hover {
+            text-decoration-color: var(--color-neutral-950);
+        }
+    }
+
+    & ul,
+    & ol {
+        padding-left: --spacing(6);
+    }
+
+    & ul {
+        list-style-type: disc;
+    }
+
+    & ol {
+        list-style-type: decimal;
+    }
+
+    & li {
+        padding-left: --spacing(2);
+    }
+
+    & li::marker {
+        color: var(--color-neutral-400);
+    }
+
+    & li + li {
+        margin-top: --spacing(2);
+    }
+
+    & blockquote {
+        border-left: 2px solid var(--color-neutral-200);
+        padding-left: --spacing(6);
+        color: var(--color-neutral-950);
+        font-style: italic;
+    }
+
+    & img {
+        width: 100%;
+        border-radius: min(1vw, 12px);
+        outline: 1px solid rgb(10 10 10 / 0.05);
+        outline-offset: -1px;
+    }
+
+    & figcaption {
+        margin-top: --spacing(3);
+        color: var(--color-neutral-500);
+        font-size: var(--text-sm);
+    }
+
+    & code {
+        border-radius: var(--radius-sm);
+        background: var(--color-neutral-100);
+        padding-inline: --spacing(1.5);
+        padding-block: --spacing(0.5);
+        color: var(--color-neutral-950);
+        font-size: var(--text-sm);
+        font-weight: var(--font-weight-medium);
+    }
+
+    & pre {
+        overflow-x: auto;
+        border-radius: var(--radius-xl);
+        background: var(--color-neutral-950);
+        padding: --spacing(5);
+        color: var(--color-neutral-200);
+        font-size: var(--text-sm);
+        line-height: --spacing(6);
+    }
+
+    & pre code {
+        background: transparent;
+        padding: 0;
+        color: inherit;
+        font-weight: var(--font-weight-normal);
+    }
+
+    & hr {
+        margin-block: --spacing(12);
+        border-color: rgb(10 10 10 / 0.08);
+    }
+
+    @variant dark {
+        color: var(--color-neutral-400);
+
+        & h2,
+        & h3,
+        & h4,
+        & h5,
+        & h6,
+        & strong,
+        & blockquote {
+            color: var(--color-neutral-100);
+        }
+
+        & a {
+            color: var(--color-neutral-100);
+            text-decoration-color: var(--color-neutral-600);
+
+            @variant hover {
+                text-decoration-color: var(--color-neutral-100);
+            }
+        }
+
+        & li::marker {
+            color: var(--color-neutral-600);
+        }
+
+        & blockquote {
+            border-left-color: var(--color-neutral-700);
+        }
+
+        & img {
+            outline-color: rgb(255 255 255 / 0.1);
+        }
+
+        & code {
+            background: var(--color-neutral-800);
+            color: var(--color-neutral-100);
+        }
+
+        & pre {
+            background: var(--color-neutral-900);
+        }
+
+        & hr {
+            border-color: rgb(255 255 255 / 0.1);
+        }
+    }
+}

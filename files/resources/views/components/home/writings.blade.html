@@ -1,0 +1,15 @@
+@props(['items'])
+<section class="mt-24 sm:mt-32">
+    <div class="mx-auto max-w-5xl px-6">
+        <x-section-heading
+            title="Recent writing"
+            description="Notes on code, design, and the slower things around them."
+            link="/posts"
+            linkText="View all posts"
+        />
+
+        <div class="mt-10 flex flex-col">
+            <x-posts-loop :items="$items" count="3"/>
+        </div>
+    </div>
+</section>

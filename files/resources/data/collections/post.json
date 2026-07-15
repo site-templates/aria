@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Writing Less, Achieving More",
+        "description": "On minimalist code — fewer lines, clearer intent, and why deleting a function can feel better than shipping one.",
+        "dateFormatted": "June 11th, 2026",
+        "readTime": "4 min read",
+        "link": "/post/writing-less-achieving-more"
+    },
+    {
+        "title": "A Developer's Guide to Zen Mornings",
+        "description": "The slow morning routine that carries me through a day of client work — records on, phone away, one good cup.",
+        "dateFormatted": "May 28th, 2026",
+        "readTime": "3 min read",
+        "link": "/post/zen-mornings"
+    },
+    {
+        "title": "Code to Canvas",
+        "description": "Why every developer should own a small corner of the web — and how a blog quietly compounds into an audience and better work.",
+        "dateFormatted": "May 9th, 2026",
+        "readTime": "4 min read",
+        "link": "/post/code-to-canvas"
+    },
+    {
+        "title": "The Perfect Brew for Optimal Productivity",
+        "description": "Notes on the coffee ritual behind my best coding sessions — beans, brew methods, and when not to pour a third cup.",
+        "dateFormatted": "April 21st, 2026",
+        "readTime": "3 min read",
+        "link": "/post/the-perfect-brew"
+    },
+    {
+        "title": "The Revival of Vintage Tech",
+        "description": "Typewriters, rotary phones, and vinyl on a web developer's desk — what old machines still teach us about focus.",
+        "dateFormatted": "March 3rd, 2026",
+        "readTime": "5 min read",
+        "link": "/post/vintage-tech"
+    }
+]
