@@ -1,6 +1,6 @@
 @props(['name' => '', 'description' => '', 'image' => '', 'url' => ''])
 <!-- The radius vars keep the thumbnail concentric with the card: inner radius = outer radius - padding -->
-<a href="{{ $url }}" target="_blank" class="group flex flex-col rounded-(--radius) p-(--padding) ring-1 ring-neutral-950/5 [--padding:--spacing(2)] [--radius:var(--radius-2xl)] hover:ring-neutral-950/10 dark:ring-white/10 dark:hover:ring-white/20">
+<a href="{{ $url }}" target="_blank" rel="noopener" class="group flex flex-col rounded-(--radius) p-(--padding) ring-1 ring-neutral-950/5 [--padding:--spacing(2)] [--radius:var(--radius-2xl)] hover:ring-neutral-950/10 dark:ring-white/10 dark:hover:ring-white/20">
     <!-- A fixed ratio keeps every card's title on the same baseline, whatever the thumbnail's natural size -->
     <img src="{{ $image }}" alt="" class="aspect-video w-full rounded-[calc(var(--radius)-var(--padding))] object-cover outline-1 -outline-offset-1 outline-black/5 dark:outline-white/10"/>
     <div class="px-2 pt-4 pb-2">

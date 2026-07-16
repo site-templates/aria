@@ -38,18 +38,42 @@ button:focus-visible {
 /*
     The faint grid behind the hero. One masked background beats a wall of divs:
     it fades out on its own and costs nothing to render.
+    Two masks intersect: the first fades the grid out toward the bottom, the
+    second carves a soft page-colored opening at the top center so the lines
+    don't run edge to edge at full strength.
 */
 @utility page-grid {
     background-image:
         linear-gradient(to right, rgb(10 10 10 / 0.055) 1px, transparent 1px),
         linear-gradient(to bottom, rgb(10 10 10 / 0.055) 1px, transparent 1px);
     background-size: 64px 64px;
-    mask-image: radial-gradient(110% 90% at 50% 0%, #000 0%, transparent 72%);
+    mask-image:
+        radial-gradient(110% 90% at 50% 0%, #000 0%, transparent 72%),
+        radial-gradient(42% 120% at 50% 0%, transparent 30%, #000 78%);
+    mask-composite: intersect;
 
     @variant dark {
         background-image:
             linear-gradient(to right, rgb(255 255 255 / 0.07) 1px, transparent 1px),
             linear-gradient(to bottom, rgb(255 255 255 / 0.07) 1px, transparent 1px);
+    }
+}
+
+/*
+    The finer grid inside the newsletter CTA — the hero motif at panel scale.
+    It fades from the top edge so the texture stays quiet behind the form.
+*/
+@utility cta-grid {
+    background-image:
+        linear-gradient(to right, rgb(10 10 10 / 0.045) 1px, transparent 1px),
+        linear-gradient(to bottom, rgb(10 10 10 / 0.045) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(100% 100% at 50% 0%, #000 0%, transparent 85%);
+
+    @variant dark {
+        background-image:
+            linear-gradient(to right, rgb(255 255 255 / 0.06) 1px, transparent 1px),
+            linear-gradient(to bottom, rgb(255 255 255 / 0.06) 1px, transparent 1px);
     }
 }
 
