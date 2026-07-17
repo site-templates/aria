@@ -1,18 +1,5 @@
 <x-layouts.main title="My Projects" description="Tools and products I've designed, built, or helped ship — from Tailwind page builders to SaaS starter kits." :menu="$menu">
 
-    <section class="pt-12 sm:pt-20">
-        <div class="mx-auto max-w-4xl px-6">
-            <x-page-heading
-                title="My Projects"
-                description="Tools and products I've designed, built, or helped ship. Most are open source; all of them taught me something."
-            />
-
-            <div class="mt-12 grid grid-cols-1 items-stretch gap-8 sm:grid-cols-2 md:grid-cols-3">
-                @foreach ($projects as $project)
-                    <x-project :name="$project->name" :description="$project->description" :image="$project->image" :url="$project->url"/>
-                @endforeach
-            </div>
-        </div>
-    </section>
+    <x-sections.projects :items="$projects"/>
 
 </x-layouts.main>

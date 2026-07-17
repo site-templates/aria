@@ -1,0 +1,19 @@
+title: Recent Writing
+description: The homepage writing teaser — heading, blurb, and the three latest posts from the post collection
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "Recent writing"
+    description:
+        type: textarea
+        label: Description
+        default: "Notes on code, design, and the slower things around them."
+    linkText:
+        type: text
+        label: Link text
+        default: "View all posts"
+    link:
+        type: url
+        label: Link
+        default: "/posts"

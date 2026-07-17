@@ -1,0 +1,11 @@
+title: Projects Grid
+description: The projects index — page heading above the card grid from the projects collection
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "My Projects"
+    description:
+        type: textarea
+        label: Description
+        default: "Tools and products I've designed, built, or helped ship. Most are open source; all of them taught me something."

@@ -1,0 +1,23 @@
+title: Footer
+description: The site-wide footer — logo, copyright line, and the three social icons
+fields:
+    brand:
+        type: text
+        label: Brand name
+        default: "aria"
+    copyright:
+        type: text
+        label: Copyright line
+        default: "© 2026 Jake Harmon. Designed and written in San Diego."
+    twitterLink:
+        type: url
+        label: X (Twitter) link
+        default: "https://twitter.com/thedevdojo"
+    githubLink:
+        type: url
+        label: GitHub link
+        default: "https://github.com/thedevdojo"
+    dribbbleLink:
+        type: url
+        label: Dribbble link
+        default: "https://dribbble.com/devdojo"

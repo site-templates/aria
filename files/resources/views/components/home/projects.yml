@@ -1,0 +1,19 @@
+title: Selected Projects
+description: The homepage project teaser — heading, blurb, and the first three cards from the projects collection
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "Selected projects"
+    description:
+        type: textarea
+        label: Description
+        default: "A few things I've designed and shipped recently — tools for developers, mostly built in public."
+    linkText:
+        type: text
+        label: Link text
+        default: "View all projects"
+    link:
+        type: url
+        label: Link
+        default: "/projects"

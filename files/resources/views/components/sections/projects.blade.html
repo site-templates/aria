@@ -1,0 +1,16 @@
+@props([
+    'items',
+    'heading' => "My Projects",
+    'description' => "Tools and products I've designed, built, or helped ship. Most are open source; all of them taught me something.",
+])
+<section class="pt-12 sm:pt-20">
+    <div class="mx-auto max-w-4xl px-6">
+        <x-page-heading :title="$heading" :description="$description"/>
+
+        <div class="mt-12 grid grid-cols-1 items-stretch gap-8 sm:grid-cols-2 md:grid-cols-3">
+            @foreach ($items as $project)
+                <x-project :name="$project->name" :description="$project->description" :image="$project->image" :url="$project->url"/>
+            @endforeach
+        </div>
+    </div>
+</section>

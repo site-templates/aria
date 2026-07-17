@@ -1,0 +1,11 @@
+title: Posts List
+description: The writing index — page heading above the divided list of posts from the post collection
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "My Writing"
+    description:
+        type: textarea
+        label: Description
+        default: "Essays and notes on building software, designing interfaces, and keeping a slow analog life alongside a fast digital one. New posts most months."

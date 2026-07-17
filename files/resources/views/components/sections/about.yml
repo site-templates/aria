@@ -1,0 +1,71 @@
+title: About
+description: The full about page — heading, photo, bio and career prose, the experience timeline, and the closing invitation
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "About Me"
+    description:
+        type: textarea
+        label: Description
+        default: "I'm an adventurous software engineer and designer from San Diego, CA, passionate about building new products and learning new technology."
+    image:
+        type: image
+        label: Photo
+        default: "https://cdn.jsdelivr.net/gh/static-templates/aria@a8e18c3c6692e0710b5aa6575be00d47ceac6c68/src/assets/images/about.jpg"
+    imageAlt:
+        type: text
+        label: Photo alt text
+        default: "Jake hiking a coastal trail near San Diego"
+    bioHeading:
+        type: text
+        label: Bio heading
+        default: "Short Bio"
+    bioBody:
+        type: textarea
+        label: Bio copy
+        default: "I enjoy going on adventures and hiking with my friends. I also love all things vintage and retro. I have a passion for artisanal coffee, vinyl records, and indie films. You can often find me exploring thrift stores and attending local music festivals."
+    careerHeading:
+        type: text
+        label: Career heading
+        default: "Career"
+    careerBody:
+        type: textarea
+        label: Career copy
+        default: "I started out at Adobe in 2016 as a junior developer on Creative Cloud, then spent five years at Google leading a small design team on the Chrome web experience. Since 2023 I've been at DevDojo, building tools for developers and designers — the most fun I've had at work yet."
+    experienceHeading:
+        type: text
+        label: Experience heading
+        default: "Experience"
+    connectHeading:
+        type: text
+        label: Connect heading
+        default: "Let's Connect"
+    connectIntro:
+        type: text
+        label: Connect copy, before the first link
+        default: "If you want to stay up to date with my work,"
+    twitterText:
+        type: text
+        label: Social link text
+        default: "follow me on 𝕏"
+    twitterLink:
+        type: url
+        label: Social link URL
+        default: "https://twitter.com/tnylea"
+    connectMiddle:
+        type: text
+        label: Connect copy, between the links
+        default: ", or send me an"
+    emailText:
+        type: text
+        label: Email link text
+        default: "email"
+    emailLink:
+        type: url
+        label: Email link URL
+        default: "mailto:jake@example.com"
+    connectOutro:
+        type: text
+        label: Connect copy, after the links
+        default: "— I read everything, and I'll get back to you."

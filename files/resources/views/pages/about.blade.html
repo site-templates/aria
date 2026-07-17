@@ -1,40 +1,5 @@
 <x-layouts.main title="About Me" description="I'm an adventurous software engineer and designer from San Diego, CA. I'm passionate about building new products and learning new technology." :menu="$menu">
 
-    <section class="pt-12 sm:pt-20">
-        <div class="mx-auto max-w-4xl px-6">
-            <x-page-heading
-                title="About Me"
-                description="I'm an adventurous software engineer and designer from San Diego, CA, passionate about building new products and learning new technology."
-            />
-
-            <img src="https://cdn.jsdelivr.net/gh/static-templates/aria@a8e18c3c6692e0710b5aa6575be00d47ceac6c68/src/assets/images/about.jpg" alt="Jake hiking a coastal trail near San Diego" class="mt-12 w-full rounded-[min(1vw,12px)] outline-1 -outline-offset-1 outline-black/5 dark:outline-white/10">
-
-            <div class="mt-16 max-w-[68ch]">
-                <h2 class="text-2xl font-semibold tracking-tight text-balance text-neutral-950 dark:text-white">Short Bio</h2>
-                <p class="mt-4 text-base/7 text-pretty text-neutral-600 dark:text-neutral-400">I enjoy going on adventures and hiking with my friends. I also love all things vintage and retro. I have a passion for artisanal coffee, vinyl records, and indie films. You can often find me exploring thrift stores and attending local music festivals.</p>
-
-                <h2 class="mt-14 text-2xl font-semibold tracking-tight text-balance text-neutral-950 dark:text-white">Career</h2>
-                <p class="mt-4 text-base/7 text-pretty text-neutral-600 dark:text-neutral-400">I started out at Adobe in 2016 as a junior developer on Creative Cloud, then spent five years at Google leading a small design team on the Chrome web experience. Since 2023 I've been at DevDojo, building tools for developers and designers — the most fun I've had at work yet.</p>
-            </div>
-
-            <h2 class="mt-14 text-2xl font-semibold tracking-tight text-balance text-neutral-950 dark:text-white">Experience</h2>
-            <div class="mt-8">
-                @foreach ($experiences as $experience)
-                    <x-about-experience
-                        :dates="$experience->dates"
-                        :role="$experience->role"
-                        :company="$experience->company"
-                        :description="$experience->description"
-                        :logo="$experience->logo"
-                    />
-                @endforeach
-            </div>
-
-            <div class="mt-14 max-w-[68ch]">
-                <h2 class="text-2xl font-semibold tracking-tight text-balance text-neutral-950 dark:text-white">Let's Connect</h2>
-                <p class="mt-4 text-base/7 text-pretty text-neutral-600 dark:text-neutral-400">If you want to stay up to date with my work, <a href="https://twitter.com/tnylea" target="_blank" rel="noopener" class="font-medium text-neutral-950 underline decoration-neutral-300 underline-offset-[3px] hover:decoration-neutral-950 dark:text-white dark:decoration-neutral-600 dark:hover:decoration-white">follow me on 𝕏</a>, or send me an <a href="mailto:jake@example.com" class="font-medium text-neutral-950 underline decoration-neutral-300 underline-offset-[3px] hover:decoration-neutral-950 dark:text-white dark:decoration-neutral-600 dark:hover:decoration-white">email</a> — I read everything, and I'll get back to you.</p>
-            </div>
-        </div>
-    </section>
+    <x-sections.about :items="$experiences"/>
 
 </x-layouts.main>

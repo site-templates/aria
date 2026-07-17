@@ -1,0 +1,19 @@
+title: Newsletter
+description: The closing CTA — a heading, one line of copy, and the signup pill
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "Join my newsletter"
+    body:
+        type: textarea
+        label: Supporting copy
+        default: "One short email a week — what I'm building, reading, and listening to. No spam, ever."
+    placeholder:
+        type: text
+        label: Email placeholder
+        default: "you@example.com"
+    buttonText:
+        type: text
+        label: Button text
+        default: "Subscribe"

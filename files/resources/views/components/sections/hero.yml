@@ -1,0 +1,65 @@
+title: Hero
+description: The homepage opener — portrait, availability badge, intro, skills, and two actions
+fields:
+    photo:
+        type: image
+        label: Portrait photo
+        default: "https://cdn.jsdelivr.net/gh/static-templates/aria@a8e18c3c6692e0710b5aa6575be00d47ceac6c68/src/assets/images/photo.png"
+    photoAlt:
+        type: text
+        label: Portrait alt text
+        default: "Illustrated portrait of Jake"
+    badge:
+        type: text
+        label: Availability badge
+        description: The small pill above the headline.
+        default: "Available for new projects"
+    heading:
+        type: text
+        label: Heading
+        default: "Hello, I'm Jake."
+    body:
+        type: textarea
+        label: Intro copy
+        default: "I'm a freelance designer and developer in San Diego, CA. I build Laravel apps and design the interfaces around them."
+    skillsLabel:
+        type: text
+        label: Skills label
+        description: The short line that introduces the skill pills.
+        default: "I can help you out with"
+    skillOne:
+        type: text
+        label: Skill one
+        default: "Laravel & TALL stack applications"
+    skillTwo:
+        type: text
+        label: Skill two
+        default: "JavaScript & Node.js services"
+    skillThree:
+        type: text
+        label: Skill three
+        default: "Interface & product design"
+    skillFour:
+        type: text
+        label: Skill four
+        default: "Branding and logo design"
+    skillFive:
+        type: text
+        label: Skill five
+        default: "Design systems that ship"
+    buttonText:
+        type: text
+        label: Primary button text
+        default: "Read my writing"
+    buttonLink:
+        type: url
+        label: Primary button link
+        default: "/posts"
+    secondaryText:
+        type: text
+        label: Secondary button text
+        default: "Follow me on 𝕏"
+    secondaryLink:
+        type: url
+        label: Secondary button link
+        default: "https://twitter.com/tnylea"

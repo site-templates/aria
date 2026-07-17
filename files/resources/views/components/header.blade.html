@@ -1,11 +1,11 @@
-@props(['menu'])
+@props(['menu', 'brand' => "aria"])
 <!-- The header is fixed, so this invisible div stands in for its height in the page flow -->
 <div class="h-16 w-full"></div>
 
 <header id="header" class="fixed inset-x-0 top-0 z-50 border-b border-transparent">
     <div class="mx-auto flex h-16 max-w-4xl items-center justify-between gap-x-6 px-6">
 
-        <x-logo/>
+        <x-logo :brand="$brand"/>
 
         <div class="flex items-center gap-x-2">
             <nav class="flex items-center gap-x-1 max-md:hidden">

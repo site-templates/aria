@@ -1,0 +1,7 @@
+title: Header
+description: The fixed top bar — logo, menu (from the menu collection), dark-mode toggle
+fields:
+    brand:
+        type: text
+        label: Brand name
+        default: "aria"

@@ -1,21 +1,31 @@
-<!-- The closing CTA. The hero's grid texture returns here, so the page ends on the note it opened with -->
-<div class="relative isolate overflow-hidden rounded-2xl px-6 py-14 ring-1 ring-neutral-950/5 sm:py-16 dark:bg-white/2 dark:ring-white/10">
-    <div class="cta-grid pointer-events-none absolute inset-0 -z-10" aria-hidden="true"></div>
+@props([
+    'heading' => "Join my newsletter",
+    'body' => "One short email a week — what I'm building, reading, and listening to. No spam, ever.",
+    'placeholder' => "you@example.com",
+    'buttonText' => "Subscribe",
+])
+<section class="mt-24 sm:mt-32">
+    <div class="mx-auto max-w-4xl px-6">
+        <!-- The closing CTA. The hero's grid texture returns here, so the page ends on the note it opened with -->
+        <div class="relative isolate overflow-hidden rounded-2xl px-6 py-14 ring-1 ring-neutral-950/5 sm:py-16 dark:bg-white/2 dark:ring-white/10">
+            <div class="cta-grid pointer-events-none absolute inset-0 -z-10" aria-hidden="true"></div>
 
-    <h2 class="mx-auto max-w-[40ch] text-center text-2xl font-semibold tracking-tight text-balance text-neutral-950 dark:text-white">Join my newsletter</h2>
-    <p class="mx-auto mt-3 max-w-[56ch] text-center text-base text-pretty text-neutral-600 dark:text-neutral-400">One short email a week — what I'm building, reading, and listening to. No spam, ever.</p>
+            <h2 class="mx-auto max-w-[40ch] text-center text-2xl font-semibold tracking-tight text-balance text-neutral-950 dark:text-white">{{ $heading }}</h2>
+            <p class="mx-auto mt-3 max-w-[56ch] text-center text-base text-pretty text-neutral-600 dark:text-neutral-400">{{ $body }}</p>
 
-    <form onsubmit="event.preventDefault();" class="mx-auto mt-8 max-w-xs">
-        <!-- The button lives inside the field: one pill, one action. The wrapper draws the focus ring for the input -->
-        <div class="flex rounded-xl bg-white p-1 ring-1 ring-neutral-950/10 has-[input:focus-visible]:ring-2 has-[input:focus-visible]:ring-neutral-900 dark:bg-white/5 dark:ring-white/15 dark:has-[input:focus-visible]:ring-white">
-            <input
-                type="email"
-                name="email"
-                required
-                placeholder="you@example.com"
-                aria-label="Email address"
-                class="min-w-0 flex-1 bg-transparent pl-2.5 text-base text-neutral-950 placeholder:text-neutral-400 focus:outline-hidden sm:text-sm dark:text-white dark:placeholder:text-neutral-500">
-            <button type="submit" class="shrink-0 rounded-lg bg-neutral-950/5 px-3 py-2 text-base font-medium text-neutral-950 hover:bg-neutral-950/10 sm:py-1.5 sm:text-sm dark:bg-white/10 dark:text-white dark:hover:bg-white/15">Subscribe</button>
+            <form onsubmit="event.preventDefault();" class="mx-auto mt-8 max-w-xs">
+                <!-- The button lives inside the field: one pill, one action. The wrapper draws the focus ring for the input -->
+                <div class="flex rounded-xl bg-white p-1 ring-1 ring-neutral-950/10 has-[input:focus-visible]:ring-2 has-[input:focus-visible]:ring-neutral-900 dark:bg-white/5 dark:ring-white/15 dark:has-[input:focus-visible]:ring-white">
+                    <input
+                        type="email"
+                        name="email"
+                        required
+                        placeholder="{{ $placeholder }}"
+                        aria-label="Email address"
+                        class="min-w-0 flex-1 bg-transparent pl-2.5 text-base text-neutral-950 placeholder:text-neutral-400 focus:outline-hidden sm:text-sm dark:text-white dark:placeholder:text-neutral-500">
+                    <button type="submit" class="shrink-0 rounded-lg bg-neutral-950/5 px-3 py-2 text-base font-medium text-neutral-950 hover:bg-neutral-950/10 sm:py-1.5 sm:text-sm dark:bg-white/10 dark:text-white dark:hover:bg-white/15">{{ $buttonText }}</button>
+                </div>
+            </form>
         </div>
-    </form>
-</div>
+    </div>
+</section>
