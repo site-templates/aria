@@ -1,0 +1,31 @@
+title: Not found
+description: The 404 message — badge, headline, and two ways back
+fields:
+    badge:
+        type: text
+        label: Badge
+        default: "Error 404"
+    heading:
+        type: text
+        label: Heading
+        default: "This page wandered off."
+    body:
+        type: textarea
+        label: Supporting copy
+        default: "There's nothing at this address — it may have moved, or I may never have written it. Everything I've published is still here, one click away."
+    buttonText:
+        type: text
+        label: Primary button text
+        default: "Back to the homepage"
+    buttonLink:
+        type: url
+        label: Primary button link
+        default: "/"
+    secondaryText:
+        type: text
+        label: Secondary button text
+        default: "Read my writing"
+    secondaryLink:
+        type: url
+        label: Secondary button link
+        default: "/posts"
