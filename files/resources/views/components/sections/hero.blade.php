@@ -39,7 +39,7 @@
 
         <div class="mt-8 flex flex-wrap justify-center gap-3">
             <x-button :text="$buttonText" :link="$buttonLink"/>
-            <x-button-secondary :text="$secondaryText" :link="$secondaryLink"/>
+            <x-button-secondary :text="$secondaryText" :link="$secondaryLink" target="_blank"/>
         </div>
     </div>
 </section>
