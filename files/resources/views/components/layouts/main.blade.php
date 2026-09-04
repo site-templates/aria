@@ -32,7 +32,7 @@
     <!-- The line below loads Tailwind and inlines your resources/css/site.css -->
     @vite('resources/css/site.css')
 </head>
-<body class="isolate antialiased bg-white text-neutral-600 dark:bg-neutral-950 dark:text-neutral-400">
+<body class="isolate antialiased bg-white text-neutral-600 dark:bg-neutral-950 dark:text-neutral-400" data-instant-navigation>
     <!-- The faint grid behind the top of the page — see the page-grid utility in resources/css/site.css -->
     <div class="page-grid pointer-events-none absolute inset-x-0 top-0 -z-10 h-140" aria-hidden="true"></div>
 
